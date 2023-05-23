@@ -6,3 +6,5 @@
 /WebCart/obj
 /WebCart/.vs/ProjectEvaluation
 /WebCart/bin/Debug/net6.0
+/UnitTest/obj
+/UnitTest/bin/Debug/net6.0
