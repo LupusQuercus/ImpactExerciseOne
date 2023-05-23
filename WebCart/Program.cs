@@ -1,3 +1,6 @@
+using System.Net.Http.Headers;
+using WebCart.Services;
+
 namespace WebCart
 {
     public class Program
@@ -7,6 +10,12 @@ namespace WebCart
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddSingleton<IBasketService, BasketService>();
+            builder.Services.AddHttpClient<ImpactAPIService>(client => {
+                client.BaseAddress = new Uri("https://azfun-impact-code-challenge-api.azurewebsites.net");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            });
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
