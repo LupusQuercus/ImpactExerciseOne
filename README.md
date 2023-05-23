@@ -12,5 +12,5 @@ My Solution explanation:
 4. Based on the instructions pdf, that you sent me, I implemented the following operations on the server-side: 
 "AddProduct"; "RemoveProduct"; "ChangeProductQuantity". In other scenario, I'd have implemented them only in client-side, and then submit them on "CreateOrder" operation;
 
-5. As I implemented them on server-side, I added the BasketService as a Singleton Service (See: Program.cs - line 13). I chose this approach, so the "_orderLines" (see BasketService) could hold the Products being managed. When the "CreateOrder" operation returns successful, I clear the "_orderLines", for the next order (See: BasketService.cs - line 86).
+5. As I implemented them (4.) on server-side, I added the BasketService as a Singleton Service (See: Program.cs - line 13). I chose this approach, so the "_orderLines" (see BasketService) could hold the Products being managed. When the "CreateOrder" operation returns successful, I clear the "_orderLines", for the next order (See: BasketService.cs - line 86).
 
