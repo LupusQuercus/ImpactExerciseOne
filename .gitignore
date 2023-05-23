@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/WebCart/.vs/WebCart
+/WebCart/obj
+/WebCart/.vs/ProjectEvaluation
+/WebCart/bin/Debug/net6.0
